@@ -1,0 +1,27 @@
+@using reg_login.Models
+@model User
+<h1>Enter your information</h1>
+    <h4>Register</h4>
+    <form asp-action="register" asp-controller="Home" method="post">
+        <span asp-validation-for="First_Name"></span>
+        <label asp-for="First_Name"></label>
+        <input asp-for="First_Name">
+        <br>
+
+        <span asp-validation-for="Last_Name"></span>
+        <label asp-for="Last_Name"></label>
+        <input asp-for="Last_Name">
+        <br>
+
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+        <br>
+
+        <span asp-validation-for="Password"></span>
+        <label asp-forcopy="Password"></label>
+        Your Password: <input asp-for="Password">
+        <br>
+
+        <input value="Register" type="submit">
+    </form>

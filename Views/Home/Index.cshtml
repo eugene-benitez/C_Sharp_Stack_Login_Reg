@@ -1,0 +1,64 @@
+﻿@using reg_login.Models
+@model User
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <script src="main.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+            <h1>Welcome to my page!</h1>
+            <br>
+    <div class="user_reg">
+        <h3>Register</h3>
+        <br>
+        <form asp-action="register" asp-controller="Home" method="post">
+            <span asp-validation-for="First_Name"></span>
+            <label asp-for="First_Name"></label>
+            <input asp-for="First_Name">
+            <br>
+
+            <span asp-validation-for="Last_Name"></span>
+            <label asp-for="Last_Name"></label>
+            <input asp-for="Last_Name">
+            <br>
+
+            <span asp-validation-for="Email"></span>
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+            <br>
+
+            <span asp-validation-for="Password"></span>
+            <label asp-forcopy="Password"></label>
+            <strong><text>Your Password:</text></strong><input asp-for="Password">
+            <br>
+            <br>
+            <br>
+            <input value="Register" type="submit">
+        </form>
+    </div>
+    <div class="user_login">
+        <h3>Login</h3>
+        <br>
+        <form action="/login" method="POST">
+        <p><strong>Email:</strong> <input type="email" name="email"></p>
+        <p><strong>Password:</strong> <input type="password" name="password"></p>
+        <button>Login</button>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

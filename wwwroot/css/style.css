@@ -1,0 +1,35 @@
+.user_reg {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: left;
+    width: 200px;
+}
+
+.user_login {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: left;
+    width: 200px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 127px;
+    margin-left: 500px;
+}
+
+div.user_login>form>label {
+    float: left;
+}
+
+div.user_login>form>text {
+    float: left;
+}
+
+div.user_reg>form>label {
+    float: left;
+}
+
+div.user_reg>form>text {
+    float: left;
+}
